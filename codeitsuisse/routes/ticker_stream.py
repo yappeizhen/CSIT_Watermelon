@@ -18,7 +18,7 @@ def test():
 def ticker_stream_part_1():
     data = request.get_json()
     stream = data['stream']
-    data = ticker_stream_challenge.to_cumulative(stream)
+    data = ticker_stream_challenge1.to_cumulative(stream)
     output = {"output": data}
     return jsonify(output)
 
@@ -28,6 +28,6 @@ def ticker_stream_part_2():
     data = request.get_json()
     stream = data['stream']
     qty_block = int(data['quantityBlock'])
-    data = ticker_stream_challenge.to_cumulative_delayed(stream, qty_block)
+    data = ticker_stream_challenge1.to_cumulative_delayed(stream, qty_block)
     output = {"output": data}
     return jsonify(output)
