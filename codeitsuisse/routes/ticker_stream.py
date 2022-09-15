@@ -17,7 +17,7 @@ def test():
 @app.route('/tickerStreamPart1', methods=['POST'])
 def ticker_stream_part_1():
     stream = request.args.get("stream")
-    data = ticker_stream_challenge.to_cumulative(json.loads(stream))
+    data = ticker_stream_challenge1.to_cumulative(json.loads(stream))
     output = {"output": data}
     return jsonify(output)
 
@@ -26,7 +26,7 @@ def ticker_stream_part_1():
 def ticker_stream_part_2():
     stream = request.args.get("stream")
     qty_block = request.args.get("qtyBlock")
-    data = ticker_stream_challenge.to_cumulative_delayed(
+    data = ticker_stream_challenge1.to_cumulative_delayed(
         json.loads(stream), int(qty_block))
     output = {"output": data}
     return jsonify(output)
