@@ -4,7 +4,7 @@ import json
 from flask import request, jsonify
 
 from codeitsuisse import app
-from codeitsuisse.challenges import ticker_stream_challenge
+from codeitsuisse.challenges import ticker_stream_challenge1
 
 logger = logging.getLogger(__name__)
 
