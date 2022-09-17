@@ -45,7 +45,7 @@ def calendar_days(payload: dict):
     days = []
     for i in range(len(output_by_month)):
         if output_by_month[i] == "alldays":
-            days.extend([j for j in range(new_month_day[i], new_month_day[i]+1)])
+            days.extend([j for j in range(new_month_day[i], new_month_day[i]+7)])
         elif output_by_month[i] == "weekday":
             days.extend(get_weekday(new_year, i+1, new_month_day[i]))
         elif output_by_month[i] == "weekend":
