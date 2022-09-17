@@ -196,6 +196,7 @@ def processCommands(ops:str):
     index = len(ops) - 1
     while index >= 0:
         if (ops[index] == 'i'):
-            res.insert(ops[index-1] + ops[index])
+            res.insert(0, ops[index-1] + ops[index])
             index -= 1
         index -= 1
+    return res
