@@ -4,13 +4,13 @@ import json
 from flask import request, jsonify
 
 from codeitsuisse import app
-from codeitsuisse.challenges import ticker_stream_challenge_test
+from codeitsuisse.challenges import *
 
 logger = logging.getLogger(__name__)
 
 
 @app.route('/tickerStreamTest', methods=['GET'])
-def test():
+def ticker_stream_test():
     return "Hello, ticker stream is working"
 
 
