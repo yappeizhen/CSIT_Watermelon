@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 @app.route('/cryptoCollapzTest', methods=['GET'])
 def crypto_collapz_test():
-    return "Hello, ticker stream is working"
+    return "Hello, Crypto Collapse is working"
 
 
 @app.route('/cryptocollapz', methods=['POST'])
