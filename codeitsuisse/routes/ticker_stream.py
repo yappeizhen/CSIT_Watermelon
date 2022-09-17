@@ -41,8 +41,10 @@ def magic_test():
 @app.route('/magiccauldrons', methods=['POST'])
 def magic_cauldrons():
     data = request.get_json()
+    print(data)
     result = []
     for input in data:
         result.append(magic_cauldrons(input))
-    output = {"output": result}
-    return jsonify(output)
+    #output = {"output": result}
+
+    return jsonify(data)
