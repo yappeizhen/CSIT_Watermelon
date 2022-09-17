@@ -1,6 +1,7 @@
 import itertools
 def read_maze(maze: str):
-    y = maze.split("\n")[:-1]
+    y = maze.replace("\\n", "\n").split("\n")[:-1]
+    # print(y)
     positions = dict()
     positions["S"], positions["E"], positions["I"] = [], [], []
     for row in range(len(y)):
@@ -13,6 +14,7 @@ def read_maze(maze: str):
                 positions[y[row][col]].append((row, col))
     min_dist = float("inf")
     min_esi_perm = []
+    # print(positions)
     for e_perms in itertools.permutations(positions["E"]):
         for s_perms in itertools.permutations(positions["S"]):
             for i_perms in itertools.permutations(positions["I"]):

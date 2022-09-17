@@ -11,6 +11,6 @@ logger = logging.getLogger(__name__)
 
 @app.route('/travelling-suisse-robot', methods=['POST'])
 def travelling_suisse_robot_method():
-    data = request.get_json()
-    output = travelling_suisse_robot.read_maze(data)
+    data = request.get_data()
+    output = travelling_suisse_robot.read_maze(data.decode())
     return jsonify(output)
