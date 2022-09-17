@@ -4,6 +4,12 @@
 # if the current price is 2 --> 2 / 2 = 1 --> max price is 4
 # if the current price is 3 --> 3*3+1 = 9*3+1 = 28/2 = 24/2 = 12/2 = 6/2 = 3 --> max is 28
 
+def stream_crypto_collapz(data: list):
+    res = []
+    for input in data:
+        res.append(crypto_collapz(input))
+    return res
+
 def crypto_collapz(input:list):
     res = []
     map = {1: 4}
