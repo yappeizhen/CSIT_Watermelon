@@ -91,6 +91,21 @@ def part_2(input: list):
     row_number = input['row_number']
     col_number = input['col_number']
 
+    #           1
+    #         1   1
+    #       1   2   1
+    #     1   3   3   1
+    #
+    # amount of overflow from sum of glass (r-1,c) and (r-1,c+1) = r(r,c)
+    # find total poured volume, obtain time = poured/flow_rate
+    # Initialize cauldron tower array
+    tower = [[0] * k for k in range(1, 102)]
+    
+    # Initialize first glass total flow = total number of cauldrons poured.
+    #tower[0][0] = 
+
+
+
     #time = amount_of_soup / (flow_rate/100)
     #for r in range(row_number,0,-1):
         #print(r)
@@ -99,7 +114,7 @@ def part_2(input: list):
 
 
     #return time
-    return 0
+    return poured/flow_rate
 
 #print(part_2(input[0]['part2']))
 

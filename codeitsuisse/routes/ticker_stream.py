@@ -44,6 +44,4 @@ def magiccauldrons():
     result = []
     for input in data:
         result.append(magic_cauldrons(input))
-    #output = {"output": result}
-
     return jsonify(result)
