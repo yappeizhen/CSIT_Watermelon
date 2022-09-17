@@ -10,12 +10,12 @@ logger = logging.getLogger(__name__)
 
 
 @app.route('/cryptoCollapzTest', methods=['GET'])
-def crypto_collapz_testt():
+def crypto_collapz_test():
     return "Hello, ticker stream is working"
 
 
 @app.route('/cryptocollapz', methods=['POST'])
 def crypto_collapz():
     data = request.get_json()
-    data = crypto_collapz_challenge.crypto_collapz(data)
+    data = crypto_collapz_challenge.stream_crypto_collapz(data)
     return jsonify(data)
