@@ -4,5 +4,6 @@ import codeitsuisse.routes.square
 import codeitsuisse.routes.ticker_stream
 import codeitsuisse.routes.crypto_collapz
 import codeitsuisse.routes.calendar_days
+import codeitsuisse.routes.rubiks
 
 
