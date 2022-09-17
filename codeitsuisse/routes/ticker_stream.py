@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 @app.route('/tickerStreamTest', methods=['GET'])
-def ticker_stream_test():
+def test():
     return "Hello, ticker stream is working"
 
 
